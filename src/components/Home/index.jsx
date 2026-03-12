@@ -98,7 +98,6 @@ class Home extends Component {
                             <Link to="/books">
                                 <button className="primary-btn">Explore Books</button>
                             </Link>
-                            {/* ADDED: Link to all trending fiction books */}
                             <Link to="/subjects/fiction">
                                 <button className="secondary-btn">Check what's trending</button>
                             </Link>
@@ -112,7 +111,6 @@ class Home extends Component {
                     onMouseLeave={this.startAutoSlide}
                 >
                     <div className="trending-header">
-                        {/* ADDED: Clicking the title now takes you to all trending books */}
                         <Link to="/subjects/fiction" className="trending-link-wrapper">
                             <h2 className="trending-title">Trending Books ❯</h2>
                         </Link>

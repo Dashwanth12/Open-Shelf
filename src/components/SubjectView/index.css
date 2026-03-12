@@ -31,14 +31,13 @@
     gap: 30px;
 }
 
-/* Updated Loader Container for perfect centering */
+
 .books-loader-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 60vh;
-    /* Centers the loader vertically */
     text-align: center;
 }
 
@@ -50,7 +49,7 @@
      font-family: 'Mikale', serif;
 }
 
-/* Subject View Specific Layout */
+
 .subject-view-page {
     background-color: #f9f7f1;
     min-height: 100vh;

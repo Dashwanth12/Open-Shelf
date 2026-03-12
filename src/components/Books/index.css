@@ -17,7 +17,7 @@
     margin-bottom: 30px;
 }
 
-/* --- Search UI --- */
+
 .search-container {
     display: flex;
     justify-content: center;
@@ -190,7 +190,7 @@
     text-align: center;
 }
 
-/* --- BUTTONS --- */
+
 .shelf-view-btn {
     width: 100%;
     background: #000000;
@@ -223,7 +223,7 @@
     color: #ffffff;
 }
 
-/* --- LOADERS & ANIMATIONS --- */
+
 .load-more-container {
     display: flex;
     justify-content: center;
@@ -261,11 +261,10 @@
     border: 2px solid #337ab7;
     background-color: #ffffff !important;
 }
-/* --- HORIZONTAL CAROUSEL --- */
+
 .horizontal-carousel {
     position: relative;
     padding: 30px 60px !important;
-    /* Creates enough gap for side arrows */
     background: #f9f7f1;
     border-radius: 12px;
     height: auto !important;
@@ -278,11 +277,10 @@
     width: 100%;
 }
 
-/* --- SIDE ARROWS --- */
+
 .side-arrow {
     position: absolute;
     top: 140px;
-    /* Aligned with cover center */
     background: rgba(0, 0, 0, 0.7);
     color: white;
     border: none;
@@ -310,7 +308,7 @@
     transform: scale(1.1);
 }
 
-/* --- FIXING THE SLENDER COVERS (The "Natural" look) --- */
+
 .cover-box {
     margin-bottom: 15px !important;
     width: 100% !important;

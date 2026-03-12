@@ -72,7 +72,7 @@
     line-height: 1.6;
 }
 
-/* Carousel Item with Animation */
+
 .carousel-item {
     display: flex;
     flex-direction: column;
@@ -101,7 +101,7 @@
 
 .carousel-item:hover .minimal-book-cover {
     transform: translateY(-10px);
-    /* Lift effect on hover */
+  
 }
 
 .trending {
@@ -159,14 +159,14 @@
     background: #000;
     color: #fff;
 }
-/* Navigation Logic CSS */
+
 .cover-link,
 .btn-link {
     text-decoration: none;
     width: 100%;
     display: block;
     color: inherit;
-    /* Prevents default blue link color */
+  
 }
 
 .carousel-item a {

@@ -46,7 +46,7 @@
     font-style: italic;
     font-weight: 400;
     position: relative;
-    /* Required for the pseudo-element to position itself */
+  
 }
 
 .active-link::after {

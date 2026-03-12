@@ -106,7 +106,6 @@ class Books extends Component {
         const categoryData = {};
         const fetchPromises = subjects.map(async (subject) => {
             try {
-                // Fetching 12 books to make carousel useful
                 const response = await fetch(`https://openlibrary.org/subjects/${subject}.json?limit=12`);
                 const data = await response.json();
                 if (data?.works) {

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ThreeDots } from 'react-loader-spinner';
-import { Heart } from 'lucide-react'; // Added Heart icon
-import { supabase } from '../../supabaseClient'; // Added Supabase
+import { Heart } from 'lucide-react'; 
+import { supabase } from '../../supabaseClient';
 import Navbar from '../Navbar';
 import './index.css';
 
@@ -10,7 +10,7 @@ const SubjectView = () => {
     const { subject } = useParams();
     const [books, setBooks] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [userFavorites, setUserFavorites] = useState([]); // Track favorites
+    const [userFavorites, setUserFavorites] = useState([]); 
 
     useEffect(() => {
         fetchUserFavorites();
@@ -87,7 +87,7 @@ const SubjectView = () => {
                         return (
                             <div key={book.id} className="slender-book-card">
                                 <div className="card-image-container">
-                                    {/* Floating Heart Button */}
+                                    
                                     <button
                                         className={`heart-btn ${isFavorited ? 'active' : ''}`}
                                         onClick={() => toggleFavorite(book)}
