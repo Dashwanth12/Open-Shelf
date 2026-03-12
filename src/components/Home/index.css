@@ -1,0 +1,186 @@
+.home {
+    font-family: serif;
+    background-color: #fdfdfd;
+}
+
+.hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: heroFadeSlide 1.2s ease forwards;
+}
+
+@keyframes heroFadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sub-title {
+    font-family: 'Mikale', serif;
+    font-weight: 400;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.hero-description {
+    font-size: 24px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.primary-btn {
+    background: black;
+    color: white;
+    border: none;
+    font-family: 'LTC Nicholas Cochin Pro', serif;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid black;
+    font-family: 'LTC Nicholas Cochin Pro', serif;
+}
+
+.quote {
+    text-align: center;
+    padding: 60px;
+    font-size: 22px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Carousel Item with Animation */
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.minimal-book-cover {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.carousel-item:hover .minimal-book-cover {
+    transform: translateY(-10px);
+    /* Lift effect on hover */
+}
+
+.trending {
+    padding: 80px 10%;
+}
+
+.trending-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.trending-title {
+    font-size: 28px;
+    color: #333;
+}
+
+.arrow-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.arrow-btn.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.view-btn {
+    width: 100%;
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.view-btn:hover {
+    background: #000;
+    color: #fff;
+}
+/* Navigation Logic CSS */
+.cover-link,
+.btn-link {
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    color: inherit;
+    /* Prevents default blue link color */
+}
+
+.carousel-item a {
+    text-align: center;
+}
+
+.primary-btn {
+    text-decoration: none;
+}
+.trending-link-wrapper {
+    text-decoration: none;
+    color: inherit;
+}
+
+.trending-link-wrapper:hover .trending-title {
+    color: #337ab7;
+}
