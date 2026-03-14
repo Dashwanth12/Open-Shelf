@@ -13,7 +13,7 @@ const BookDetail = () => {
     const [isSaved, setIsSaved] = useState(false);
     const [readingStatus, setReadingStatus] = useState('Want to Read');
     const [shouldRedirect, setShouldRedirect] = useState(false);
-    const [shareText, setShareText] = useState("Share Book"); // 1. State for feedback
+    const [shareText, setShareText] = useState("Share Book");
 
     useEffect(() => {
         const fetchBookDetails = async () => {
