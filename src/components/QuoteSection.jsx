@@ -40,7 +40,8 @@ const QuoteSection = () => {
     return (
         <QuoteWrapper>
             <div className="quote-container">
-                <p className="quote-text">"{quote.text}"</p>
+                {/* Changed <p> to <blockquote> to fix nesting errors */}
+                <blockquote className="quote-text">"{quote.text}"</blockquote>
                 <div className="quote-meta">
                     <span className="quote-author">— {quote.author}</span>
                     <span className="quote-context">{quote.context}</span>
@@ -50,49 +51,53 @@ const QuoteSection = () => {
     );
 };
 
-const QuoteWrapper = styled.section`
+// Use a div or section, but ensure the parent in Home.js is NOT a <p>
+const QuoteWrapper = styled.div`
   display: flex;
   justify-content: center;
-  padding: 60px 20px;
-  background-color: #f9f7f1; /* Matching your cream archive look */
-  border-top: 1px solid #e0ddd5;
-  border-bottom: 1px solid #e0ddd5;
-  margin: 40px 0;
+  padding: 80px 20px;
+  background-color: #f9f7f1; 
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  margin: 60px 0;
 
   .quote-container {
-    max-width: 800px;
+    max-width: 700px;
     text-align: center;
   }
 
   .quote-text {
     font-family: 'Mikale', serif;
-    font-size: 24px;
+    font-size: 28px; /* Slightly larger for impact */
     font-style: italic;
     color: #1a1a1a;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    padding: 0;
+    border: none;
   }
 
   .quote-meta {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
   }
 
   .quote-author {
     font-family: ltc-nicholas-cochin-pro, serif;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 14px;
+    letter-spacing: 0.15em;
+    font-size: 13px;
+    color: #333;
   }
 
   .quote-context {
     font-family: ltc-nicholas-cochin-pro, serif;
     font-style: italic;
-    font-size: 13px;
-    color: #666;
+    font-size: 12px;
+    color: #888;
   }
 `;
 
