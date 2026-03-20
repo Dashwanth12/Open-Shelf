@@ -26,7 +26,7 @@ class Home extends Component {
         try {
             const response = await fetch('https://openlibrary.org/subjects/fiction.json?limit=12');
             const data = await response.json();
-
+            
             if (data && data.works) {
                 const formattedBooks = data.works.map(book => ({
                     id: book.key,
@@ -157,9 +157,9 @@ class Home extends Component {
                 </section>
 
                 <section className="quote">
-                    <p>
-                       <QuoteSection /> 
-                    </p>
+                    <div className="quote-wrapper">
+                        <QuoteSection />
+                    </div>
                 </section>
             </div>
         );
