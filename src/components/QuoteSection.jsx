@@ -40,7 +40,6 @@ const QuoteSection = () => {
     return (
         <QuoteWrapper>
             <div className="quote-container">
-                {/* Changed <p> to <blockquote> to fix nesting errors */}
                 <blockquote className="quote-text">"{quote.text}"</blockquote>
                 <div className="quote-meta">
                     <span className="quote-author">— {quote.author}</span>
@@ -51,7 +50,7 @@ const QuoteSection = () => {
     );
 };
 
-// Use a div or section, but ensure the parent in Home.js is NOT a <p>
+
 const QuoteWrapper = styled.div`
   display: flex;
   justify-content: center;
