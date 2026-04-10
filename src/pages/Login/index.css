@@ -38,6 +38,14 @@
     background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
     z-index: 1;
 }
+.quote-text {
+    font-size: 18px;
+    font-style: italic;
+    font-family: Cormorant Garamond, serif;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
 
 .auth-card {
     width: 100%;

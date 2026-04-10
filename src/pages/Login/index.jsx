@@ -79,6 +79,7 @@ export default function App() {
         return (
             <div className="login-page-container">
                 <div className="auth-card">
+                    <p className="quote-text">Experience the aura of books and take it with you.</p>
                     <h1 className="logo">Open Shelf</h1>
                     <p className="subtitle-text">Enter email to sign in</p>
 
