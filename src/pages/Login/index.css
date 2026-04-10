@@ -5,7 +5,7 @@
 
 .login-page-container,
 .auth-wrapper {
-    background: whitesmoke;
+    background: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +39,7 @@
     z-index: 1;
 }
 .quote-text {
-    font-size: 18px;
+    font-size: 25px;
     font-style: italic;
     font-family: Cormorant Garamond, serif;
     color: #333;
