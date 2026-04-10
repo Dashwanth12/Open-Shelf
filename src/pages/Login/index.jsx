@@ -64,11 +64,9 @@ export default function App() {
 
     const handleLogout = () => supabase.auth.signOut();
 
-    // Authenticated State
     if (user) {
         return (
             <div className="auth-wrapper">
-                <div className="watermark-text">OPEN SHELF</div>
                 <div className="auth-card">
                     <p className="welcome-text">Welcome, {user.email}</p>
                     <button className="btn-primary" onClick={handleLogout}>
