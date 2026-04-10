@@ -1,31 +1,55 @@
 @font-face {
     font-family: 'Mikale';
-    src: url('../../fonts/mikale.ttf') format('truetype');
+    src: url('../fonts/mikale.ttf') format('truetype');
 }
 
-/* Base Container */
 .login-page-container,
 .auth-wrapper {
     background: #ffffff;
-    /* Oura style is often clean white or very deep dark */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    position: relative;
 }
 
-/* Watermark Text */
+/* Background Image Layer */
+.login-page-container::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1764923753986-c3f564e295d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3p5JTIwYm9va3Nob3AlMjBpbnRlcmlvciUyMHJlYWRpbmd8ZW58MXx8fHwxNzc1ODE1Njk0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+/* Gradient overlay on image */
 .login-page-container::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+    z-index: 1;
+}
+
+/* Watermark text */
+.login-page-container .watermark-text {
     content: "OPEN SHELF";
-    position: absolute;
+    position: fixed;
     font-family: 'Mikale', serif;
     font-size: 15vw;
     color: rgba(0, 0, 0, 0.03);
-    /* Extremely subtle */
     top: 50%;
-    left: 50%;
+    left: 75%;
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 0;
@@ -38,15 +62,15 @@
     max-width: 360px;
     padding: 20px;
     background: transparent;
-    /* No card border for Oura look */
     text-align: center;
-    z-index: 1;
+    z-index: 2;
+    position: relative;
+    margin-left: 50%;
 }
 
 /* Logo & Headers */
 .logo {
     font-size: 32px;
-    /* Slightly smaller, more elegant */
     font-weight: 400;
     margin-bottom: 12px;
     font-family: 'Mikale', serif;
@@ -67,10 +91,8 @@
 .email-input {
     width: 100%;
     padding: 16px 0;
-    /* Only vertical padding */
     border: none;
     border-bottom: 1.5px solid #e0e0e0;
-    /* Bottom border only */
     border-radius: 0;
     margin-bottom: 32px;
     font-size: 16px;
@@ -89,7 +111,6 @@
     width: 100%;
     padding: 14px;
     border-radius: 30px;
-    /* Pill shape */
     border: 1px solid #000;
     background-color: #000;
     color: #fff;
@@ -103,6 +124,7 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    gap: 8px;
 }
 
 .btn-primary:hover:not(:disabled) {
@@ -114,6 +136,10 @@
     background-color: #f5f5f5;
     border-color: #f5f5f5;
     color: #bdbdbd;
+}
+
+.btn-icon {
+    margin-right: 8px;
 }
 
 /* OTP Styling */
@@ -144,6 +170,11 @@
     border-bottom-color: #000;
 }
 
+.otp-separator {
+    font-size: 24px;
+    color: #e0e0e0;
+}
+
 /* Links/Resend */
 .resend-container {
     margin-top: 32px;
@@ -161,9 +192,32 @@
     text-decoration: underline;
     text-underline-offset: 4px;
 }
+
+.btn-link:disabled {
+    color: #bdbdbd;
+    cursor: not-allowed;
+}
+
 .welcome-text {
     font-size: 20px;
     margin-bottom: 30px;
     font-weight: 300;
     letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+
+    .login-page-container::before,
+    .login-page-container::after {
+        display: none;
+    }
+
+    .auth-card {
+        margin-left: 0;
+    }
+
+    .watermark-text {
+        left: 50%;
+    }
 }
