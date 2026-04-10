@@ -13,12 +13,10 @@ export default function App() {
     const [timer, setTimer] = useState(0);
 
     useEffect(() => {
-        // Initial session check
         supabase.auth.getSession().then(({ data }) => {
             setUser(data.session?.user ?? null);
         });
 
-        // Listen for auth state changes (login/logout)
         const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
             setUser(session?.user ?? null);
         });
@@ -77,11 +75,9 @@ export default function App() {
         );
     }
 
-    // Step 1: Email Input
     if (step === 1) {
         return (
             <div className="login-page-container">
-                <div className="watermark-text">OPEN SHELF</div>
                 <div className="auth-card">
                     <h1 className="logo">Open Shelf</h1>
                     <p className="subtitle-text">Enter email to sign in</p>
@@ -104,11 +100,9 @@ export default function App() {
         );
     }
 
-    // Step 2: OTP Verification
     if (step === 2) {
         return (
             <div className="login-page-container">
-                <div className="watermark-text">OPEN SHELF</div>
                 <div className="auth-card">
                     <h1 className="logo">Open Shelf</h1>
                     <p className="subtitle-text">We sent a code to {email}</p>
