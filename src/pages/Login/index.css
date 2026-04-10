@@ -5,7 +5,7 @@
 
 .login-page-container,
 .auth-wrapper {
-    background: #ffffff;
+    background: #f8f8f8;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,6 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     position: relative;
 }
-
 
 .login-page-container::before {
     content: "";
@@ -56,6 +55,7 @@
     letter-spacing: 0.3rem;
 }
 
+
 .auth-card {
     width: 100%;
     max-width: 400px;
@@ -72,7 +72,7 @@
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 8px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Mikale', serif;
     color: #000;
     letter-spacing: 0.5px;
 }
@@ -85,6 +85,7 @@
     line-height: 1.4;
     font-weight: 400;
 }
+
 
 .email-input {
     width: 100%;
@@ -108,6 +109,7 @@
     outline: none;
     border-bottom-color: #000;
 }
+
 
 .btn-primary {
     width: 100%;
@@ -139,6 +141,7 @@
     color: #ccc;
     cursor: not-allowed;
 }
+
 
 .otp-group {
     display: flex;
@@ -174,6 +177,7 @@
     margin: 0 4px;
 }
 
+
 .resend-container {
     margin-top: 40px;
     font-size: 12px;
@@ -207,6 +211,7 @@
     letter-spacing: 0;
     color: #000;
 }
+
 
 @media (max-width: 1024px) {
 
