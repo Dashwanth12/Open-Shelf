@@ -26,7 +26,6 @@ const MyShelf = () => {
 
     const fetchRecommendations = async () => {
         try {
-            // Fetching specifically for Colleen Hoover and William Shakespeare
             const [hooverRes, shakespeareRes] = await Promise.all([
                 fetch(`https://openlibrary.org/search.json?author=Colleen+Hoover&limit=3`),
                 fetch(`https://openlibrary.org/search.json?author=William+Shakespeare&limit=3`)
@@ -35,7 +34,6 @@ const MyShelf = () => {
             const hooverData = await hooverRes.json();
             const shakespeareData = await shakespeareRes.json();
 
-            // Combine the docs from both authors
             const combinedDocs = [...(hooverData.docs || []), ...(shakespeareData.docs || [])];
 
             setRecommended(combinedDocs.map(b => ({

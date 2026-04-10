@@ -76,7 +76,7 @@ export default function App() {
         return (
             <div className="login-page-container">
                 <div className="auth-card">
-                    <h1 className="logo">Open Shelf</h1>
+                    <h1 className="logo">OPEN SHELF</h1>
                     <p className="subtitle-text">Enter email to sign in</p>
 
                     <form onSubmit={handleSendOtp}>
