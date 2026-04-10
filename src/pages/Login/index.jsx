@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { OTPInput } from 'input-otp';
-import { supabase } from '../supabaseClient';
+import { supabase } from '../../supabaseClient';
 import { LogOut } from 'lucide-react';
 import './index.css';
 
