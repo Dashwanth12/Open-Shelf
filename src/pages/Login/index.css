@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Mikale';
-    src: url('../fonts/mikale.ttf') format('truetype');
+    src: url('../../fonts/mikale.ttf') format('truetype');
 }
 
 .login-page-container,
 .auth-wrapper {
-    background: #f8f8f8;
+    background: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +28,6 @@
     z-index: 0;
 }
 
-
 .login-page-container::after {
     content: "";
     position: fixed;
@@ -40,22 +39,6 @@
     z-index: 1;
 }
 
-
-.login-page-container .watermark-text {
-    content: "OPEN SHELF";
-    position: fixed;
-    font-family: 'Mikale', serif;
-    font-size: 10vw;
-    color: rgba(0, 0, 0, 0.02);
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 0;
-    letter-spacing: 0.3rem;
-}
-
-
 .auth-card {
     width: 100%;
     max-width: 400px;
@@ -66,7 +49,6 @@
     position: relative;
     margin-left: 50%;
 }
-
 
 .logo {
     font-size: 24px;
@@ -85,7 +67,6 @@
     line-height: 1.4;
     font-weight: 400;
 }
-
 
 .email-input {
     width: 100%;
@@ -109,7 +90,6 @@
     outline: none;
     border-bottom-color: #000;
 }
-
 
 .btn-primary {
     width: 100%;
@@ -141,7 +121,6 @@
     color: #ccc;
     cursor: not-allowed;
 }
-
 
 .otp-group {
     display: flex;
@@ -177,7 +156,6 @@
     margin: 0 4px;
 }
 
-
 .resend-container {
     margin-top: 40px;
     font-size: 12px;
@@ -212,7 +190,6 @@
     color: #000;
 }
 
-
 @media (max-width: 1024px) {
 
     .login-page-container::before,
@@ -222,9 +199,6 @@
 
     .auth-card {
         margin-left: 0;
-    }
-
-    .watermark-text {
-        left: 50%;
+        max-width: 320px;
     }
 }
