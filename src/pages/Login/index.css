@@ -15,7 +15,6 @@
     position: relative;
 }
 
-/* Background Image Layer */
 .login-page-container::before {
     content: "";
     position: fixed;
@@ -23,13 +22,13 @@
     left: 0;
     width: 50%;
     height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1764923753986-c3f564e295d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3p5JTIwYm9va3Nob3AlMjBpbnRlcmlvciUyMHJlYWRpbmd8ZW58MXx8fHwxNzc1ODE1Njk0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral');
+    background-image: url('https://images.unsplash.com/photo-1700906010457-c7a565935b81?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
     background-position: center;
     z-index: 0;
 }
 
-/* Gradient overlay on image */
+
 .login-page-container::after {
     content: "";
     position: fixed;
@@ -41,7 +40,7 @@
     z-index: 1;
 }
 
-/* Watermark text */
+
 .login-page-container .watermark-text {
     content: "OPEN SHELF";
     position: fixed;
@@ -56,7 +55,6 @@
     letter-spacing: 0.5rem;
 }
 
-/* Card - Stripping the heavy shadow for a flatter, modern look */
 .auth-card {
     width: 100%;
     max-width: 360px;
@@ -68,7 +66,6 @@
     margin-left: 50%;
 }
 
-/* Logo & Headers */
 .logo {
     font-size: 32px;
     font-weight: 400;
@@ -87,7 +84,6 @@
     line-height: 1.5;
 }
 
-/* Inputs - Clean and Spaced */
 .email-input {
     width: 100%;
     padding: 16px 0;
@@ -106,7 +102,7 @@
     border-bottom-color: #000;
 }
 
-/* Buttons - Pill Shape */
+
 .btn-primary {
     width: 100%;
     padding: 14px;
@@ -175,7 +171,6 @@
     color: #e0e0e0;
 }
 
-/* Links/Resend */
 .resend-container {
     margin-top: 32px;
     font-size: 13px;
@@ -205,7 +200,6 @@
     letter-spacing: 0.5px;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
 
     .login-page-container::before,
